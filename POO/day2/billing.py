@@ -1,4 +1,5 @@
-class Cliente: 
+class Persona:
+
     def __init__(self):
         self.codigo = 0
         self.nombre = ""
@@ -30,49 +31,27 @@ class Cliente:
     def getEmail(self): #return the value of self.codigo
         return self.email 
     
-    def setCredito(self, credito): #update self.codigo
-        self.credito = credito
+class Cliente(Persona): 
+    
+    def __init__(self):
+        self.credito = 0.0
+
+    def setCredito(self, credit):
+        self.credito = credit
 
     def getCredito(self): #return the value of self.codigo
         return self.credito 
     
-class Vendedor:
+class Vendedor(Persona):
     def __init__(self):
-        self.codigo = 0
-        self.nombre = ""
-        self.telefono = ""
-        self.email = ""
-        self.direccion = ""
+       self.direccion
 
-    def setCodigo(self, cod): #update self.codigo
-        self.codigo = cod
-
-    def getCodigo(self): #return the value of self.codigo
-        return self.codigo 
-
-    def setNombre(self, name): #update self.codigo
-        self.nombre = name
-
-    def getNombre(self): #return the value of self.codigo
-        return self.nombre 
-    
-    def setTelefono(self, tel): #update self.codigo
-        self.telefono = tel
-
-    def getTelefono(self): #return the value of self.codigo
-        return self.telefono 
-    
-    def setEmail(self, ema): #update self.codigo
-        self.email = ema
-
-    def getEmail(self): #return the value of self.codigo
-        return self.email 
-    
-    def setCredito(self, address): #update self.codigo
+    def setDireccion(self, address): #update self.codigo
         self.direccion = address
 
-    def getCredito(self): #return the value of self.codigo
-        return self.direccion 
+    def getDireccion(self):
+        return self.direccion
+
 
 class Producto:
     def __init__(self):
